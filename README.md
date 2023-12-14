@@ -1,4 +1,4 @@
-# Splicing prediction backend
+# Splicing prediction app
 
 This repository contains an exploration of the field of Bioinformatics.
 
