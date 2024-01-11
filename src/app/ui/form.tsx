@@ -12,9 +12,9 @@ export default function Form() {
     const formData = new FormData(e.target as HTMLFormElement);
 
     try {
-      const response = await fetch("http://localhost:3001/submit", {
+      const response = await fetch("http://localhost:3001/v1/jobs", {
         method: "POST",
-        body: formData, 
+        body: formData,
       });
       const result = await response.json();
       router.push(`results/${result.jobId}`);
@@ -55,7 +55,8 @@ export default function Form() {
           name="model"
           className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
         >
-          <option value="DSSP">DSSP</option>
+          <option value="AS_DSSP">AS DSSP</option>
+          <option value="DS_DSSP">DS DSSP</option>
           <option value="DeepSplicer">DeepSplicer</option>
           <option value="SpliceAI">SpliceAI</option>
         </select>
@@ -73,12 +74,13 @@ export default function Form() {
           name="email"
           id="email"
           className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+          defaultValue={"ra93996@uem.br"}
         />
       </div>
 
       <button
         type="submit"
-        className="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700"
+        className="py-2 px-4 bg-emerald-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700"
       >
         Executar
       </button>
