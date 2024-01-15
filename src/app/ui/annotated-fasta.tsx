@@ -30,7 +30,7 @@ export default function AnnotatedFasta({
   resultSequences: ResultSequence[];
 }) {
   return (
-    <div className="break-all font-mono text-sm h-[31rem] w-full overflow-auto px-8 rounded-lg border border-gray-200">
+    <div className="break-all font-mono text-sm h-[31rem] w-full overflow-auto rounded-lg pr-4">
       {resultSequences.map((sequence) => {
         const sequenceHits = resultHits.filter(
           (hit) => hit.name === sequence.name,
@@ -43,7 +43,7 @@ export default function AnnotatedFasta({
         return (
           <div
             key={sequence.name}
-            className="rounded-lg border border-gray-200 px-3 py-2 my-3 text-xs"
+            className="rounded-lg border border-gray-200 px-3 py-2 mb-3 text-xs"
           >
             <div className="font-medium text-md mb-2">&gt;{sequence.name}</div>
             <div className="[&>*:nth-child(even)]:bg-emerald-400">

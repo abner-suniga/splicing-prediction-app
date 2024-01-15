@@ -53,7 +53,6 @@ export default function Results({ params }: { params: { id: string } }) {
               ID: {params.id}
             </p>
             <p>Modelo: {jobResult.model}</p>
-            <p>Arquivo: fasta.example</p>
           </div>
         </div>
         <ResultsControl result={jobResult}/>
