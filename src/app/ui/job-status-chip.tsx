@@ -1,4 +1,4 @@
-import { JobStatus } from "../types/result";
+import { JobStatus } from "@/app/types/jobs";
 
 export default function JobStatusChip({ status }: { status: JobStatus }) {
   let statusColor = "";
@@ -20,9 +20,9 @@ export default function JobStatusChip({ status }: { status: JobStatus }) {
 
   return (
     <span
-      className={`w-fit h-fit text-lg font-mono font-semibold inline-flex items-center justify-center rounded-full px-2.5 py-0.5 border ${statusColor}`}
+      className={`w-fit h-fit text-xs font-mono font-semibold inline-flex items-center justify-center rounded-full px-2.5 py-0.5 border ${statusColor}`}
     >
-      Status: {statusText}
+      {statusText}
     </span>
   );
 }

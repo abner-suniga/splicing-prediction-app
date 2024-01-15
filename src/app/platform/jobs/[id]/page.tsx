@@ -1,21 +1,27 @@
 "use client"
 
 import React, { useEffect, useState } from "react";
-import { JobResults, JobStatus } from "@/app/types/result";
-import ResultsControl from "../result-control";
+import { JobResults, JobStatus } from "@/app/types/jobs";
+import ResultsControl from "@/app/platform/jobs/[id]/result-control";
 import JobStatusChip from "@/app/ui/job-status-chip";
+import { useAuth } from "@clerk/nextjs";
 
 
 export default function Results({ params }: { params: { id: string } }) {
   const [jobResult, setJobResult] = useState<JobResults | null>()
-
-  console.log(jobResult)
+  const { getToken } = useAuth()
   
   useEffect(() => {
-    const fetchJob = () => {
-      fetch(`http://localhost:3001/v1/jobs/${params.id}`, {
+    const fetchJob = async () => {
+      const token = await getToken()
+      const response = await fetch(`http://localhost:3001/v1/jobs/${params.id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
         cache: "no-store",
-      }).then(res => res.json()).then(data => setJobResult(data));
+      })
+      const data = await response.json()
+      setJobResult(data)
     };
 
     fetchJob();
@@ -27,7 +33,7 @@ export default function Results({ params }: { params: { id: string } }) {
     }, 10000);
 
     return () => clearInterval(interval);
-  }, [params.id, jobResult?.status]);
+  }, [params.id, jobResult?.status, getToken]);
 
 
 

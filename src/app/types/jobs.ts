@@ -24,3 +24,13 @@ export type JobResults = {
   resultSequences: ResultSequence[];
   resultHits: ResultHit[];
 };
+
+export type Job = {
+  id: string;
+  status: JobStatus;
+  model: string;
+  fastaFileId: string;
+  userId: string;
+  createdAt: Date;
+  updatedAt: Date;
+};

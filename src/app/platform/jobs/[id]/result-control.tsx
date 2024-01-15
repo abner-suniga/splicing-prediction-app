@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { JobResults, ResultHit } from "../types/result";
-import AnnotatedFasta from "../ui/annotated-fasta";
-import ResultsTable from "../ui/result-table";
-import Select from "../ui/select";
-import { useSort } from "../hooks/use-sort";
-import { usePagination } from "../hooks/use-pagination";
+import { JobResults, ResultHit } from "@/app/types/jobs";
+import AnnotatedFasta from "@/app/ui/annotated-fasta";
+import ResultsTable from "@/app/ui/result-table";
+import Select from "@/app/ui/select";
+import { useSort } from "@/app/hooks/use-sort";
+import { usePagination } from "@/app/hooks/use-pagination";
 
 export default function ResultsControl({ result }: { result: JobResults }) {
   const sequences = useMemo(

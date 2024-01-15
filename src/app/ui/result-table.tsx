@@ -27,10 +27,10 @@ export default function ResultsTable({
             <thead className="">
               <tr>
                 <th className="text-left whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  Sequence
+                  Sequência
                 </th>
                 <th className="text-left whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  Type
+                  Tipo
                 </th>
                 <th
                   className="cursor-pointer text-center whitespace-nowrap px-4 py-2 font-medium text-gray-900"
@@ -56,11 +56,11 @@ export default function ResultsTable({
                         clipRule="evenodd"
                       />
                     </svg>
-                    Position
+                    Posição
                   </div>
                 </th>
                 <th className="text-center whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  Hit
+                  Contexto
                 </th>
                 <th
                   className="cursor-pointer text-right whitespace-nowrap px-4 py-2 font-medium text-gray-900"
