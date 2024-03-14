@@ -14,7 +14,7 @@ export default function Results({ params }: { params: { id: string } }) {
     const fetchJob = async () => {
       const token = await getToken();
       const response = await fetch(
-        `https://1c2dd5bf75e3.ngrok.app/jobs/${params.id}`,
+        `https://1c2dd5bf75e3.ngrok.app/v1/jobs/${params.id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
