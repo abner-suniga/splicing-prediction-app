@@ -1,4 +1,4 @@
-import { ResultHit, ResultSequence } from "../types/result";
+import { ResultHit, ResultSequence } from "../types/jobs";
 
 function splitStringAtIndices(
   inputString: string,

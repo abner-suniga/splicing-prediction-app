@@ -12,7 +12,7 @@ export default function ResultsPage() {
   useEffect(() => {
     const fetchJobs = async () => {
       const token = await getToken();
-      const response = await fetch(`http://localhost:3001/v1/jobs`, {
+      const response = await fetch(`https://1c2dd5bf75e3.ngrok.app/v1/jobs`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -70,7 +70,8 @@ export default function ResultsPage() {
                   {job.id}
                 </td>
                 <td className="text-left whitespace-nowrap px-4 py-2 text-gray-700">
-                  {job.createdAt.toLocaleDateString("pt-BR")} - {job.createdAt.toLocaleTimeString("pt-BR")}
+                  {job.createdAt.toLocaleDateString("pt-BR")} -{" "}
+                  {job.createdAt.toLocaleTimeString("pt-BR")}
                 </td>
                 <td className="text-left whitespace-nowrap px-4 py-2 text-gray-700">
                   {job.model}

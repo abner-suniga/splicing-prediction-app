@@ -15,7 +15,7 @@ export default function NewJob() {
 
     try {
       const token = await getToken();
-      const response = await fetch("http://localhost:3001/v1/jobs", {
+      const response = await fetch("https://1c2dd5bf75e3.ngrok.app/v1/jobs", {
         method: "POST",
         body: formData,
         headers: {
