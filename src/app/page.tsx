@@ -21,7 +21,12 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                DSSP
+                <b>DSSP</b>
+                <br />
+                Treinado com <i>The Homo Sapiens Splice-Site Data set HS3D</i>
+                <br />
+                Human Splice-Site Prediction with Deep Neural Networks. Naito T.
+                J Comput Biol. 2018;25(8):954–61.
               </a>
             </li>
             <li>
@@ -30,7 +35,15 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                DeepSplicer
+                <b>DeepSplicer</b>
+                <br />
+                Treinado com sequências H. sapiens do Ensembl
+                (https://www.ensembl.org)
+                <br />
+                Fernandez-Castillo E, Barbosa-Santillán LI, Falcon-Morales L,
+                Sánchez-Escobar JJ. Deep Splicer: A CNN Model for Splice Site
+                Prediction in Genetic Sequences. Genes (Basel). 2022 May
+                19;13(5):907.
               </a>
             </li>
             <li>
@@ -39,14 +52,20 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                SpliceAI
+                <b>SpliceAI</b>
+                <br />
+                Jaganathan K, Kyriazopoulou Panagiotopoulou S, McRae JF,
+                Darbandi SF, Knowles D, Li YI, Kosmicki JA, Arbelaez J, Cui W,
+                Schwartz GB, Chow ED, Kanterakis E, Gao H, Kia A, Batzoglou S,
+                Sanders SJ, Farh KK. Predicting Splicing from Primary Sequence
+                with Deep Learning. Cell. 2019 Jan 24;176(3):535-548.e24.
               </a>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="flex flex-col items-center space-y-8">
+      <div className="flex flex-col items-center space-y-8 mt-4">
         <a
           className="inline-block w-fit rounded border border-emerald-600 bg-emerald-600 px-12 py-3 text-md font-medium text-white hover:bg-transparent hover:text-emerald-600 focus:outline-none focus:ring active:text-emerald-500"
           href="/platform/jobs"
